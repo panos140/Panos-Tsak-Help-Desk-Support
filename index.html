@@ -16,6 +16,10 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+
             <label for="problem">Describe Your Problem:</label>
             <textarea id="problem" name="problem" rows="4" required></textarea>
 
@@ -32,6 +36,7 @@
         document.getElementById("ticketForm").addEventListener("submit", function(event) {
             event.preventDefault();
             const name = document.getElementById("name").value;
+            const name = document.getElementById("email").value;
             const problem = document.getElementById("problem").value;
             const ticketId = "TCKT-" + Math.floor(Math.random() * 100000);
             
